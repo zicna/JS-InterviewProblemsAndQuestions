@@ -4,15 +4,24 @@
 
 
 
-function sum(x, c) {
-  if (Object.values(arguments).length == 1) {
-    return function (c) {
-      return c + x;
-    }
-  } else {
-    return x + c
-  }
-}
+// function sum(x, c) {
+//   if (Object.values(arguments).length == 1) {
+//     return function (c) {
+//       return c + x;
+//     }
+//   } else {
+//     return x + c
+//   }
+// }
+
+// function sum(x) {
+//     if (arguments.length == 2) {
+//       return arguments[0] + arguments[1];
+//     } else {
+//       return function(y) { return x + y; };
+//     }
+//   }
+  
 
 
 
