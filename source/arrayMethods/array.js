@@ -44,7 +44,7 @@ console.log(typeof arr.join("-"))
 console.log(arr)
 //* =>  [4, 5, 6, 7, 8]
 
-// ! AT
+// ! AT (ES2020)
 console.log(typeof arr.at(1))
 // * => 5, number
 
@@ -76,3 +76,46 @@ console.log(arr.shift())
 // * => 4; number of element after removing first element
 console.log(arr)
 //* =>  (4) [5, 6, 7, 8]
+
+
+// ! REVERSE
+arr = [4, 5, 6, 7, 8]
+console.log(arr.reverse())
+// * => (5) [8, 7, 6, 5, 4]
+console.log(arr)
+// * => (5) [8, 7, 6, 5, 4]
+
+// ! LAST ELEMENT OF the array
+arr = [4, 5, 6, 7, 8];
+console.log(arr[arr.length - 1])
+console.log(arr.slice(-1)[0])
+console.log(arr.at(-1))
+
+
+// ! forEach loop
+
+const movements = [300, -500, 100, -789, 900, 123, -43];
+
+movements.forEach(value => {
+    console.log(value > 0 ? "deposit" : "withdraw"); 
+})
+
+
+const currencies = new Map([
+    ['USD', 'United States dollar'],
+    ['EUR', 'Euro'],
+    ['GBP', 'Pound sterling']
+])
+
+currencies.forEach((value, key, map) => {
+    console.log(`${key} : ${value}`)
+})
+
+const curr = new Set(['USD', 'RSD', 'USD', "RSD", 'EUR', 'GBP']);
+
+curr.forEach((value, key, set) => {
+    console.log(`value: ${value}; key: ${key}`)
+})
+
+// ! value is the same as key
+// ! _varName => throwable variable in JS
