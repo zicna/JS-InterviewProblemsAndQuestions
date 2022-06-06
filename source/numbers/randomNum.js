@@ -15,7 +15,7 @@ const randomInt = (min, max) => Math.floor((Math.random() * (max - min) + 1) + m
 // !        min value is still almost 0 since Math.random() can produce almost 0 so it doesn't matter what wi multiply it with
 
 // ! step 4. 
-// !        we can use Math.tunc() or Math.floor() interchangeable
+// !        we can use Math.trunc() or Math.floor() interchangeable when we are dealing with positive numbers
 
 // ! Must be careful if writing function that uses Math.round() since:
 // * numbers range(0..3)        Math.round(number)      % get get a number
@@ -27,7 +27,7 @@ const randomInt = (min, max) => Math.floor((Math.random() * (max - min) + 1) + m
 // * mapping random numbers to Map object
 const mapRandomNumbers = (min, max) => {
     const map = new Map();
-    const randomInt = () => Math.trunc((Math.random() * (max - min + 1))) + min;
+    const randomInt = () => Math.floor((Math.random() * (max - min + 1))) + min;
 
     for(let i =0; i < 10000000; i++){
         let temp = randomInt();
