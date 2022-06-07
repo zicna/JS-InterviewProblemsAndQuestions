@@ -32,6 +32,7 @@ Math.max(2,3,4,23);//*          23                      returns max value
 Math.max(2,3,4,"23");//*        23                      does type coercion
 Math.max(2,3,4,"23px");//*      NaN                     does NOT do parse
 // * same is for Math.min()
+Math.abs(-12);//*               12                      returns absolute values
 Math.random();//*               rand(0-1)
 
 // ! rounding integers
