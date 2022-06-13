@@ -60,4 +60,3 @@ navElement.addEventListener("click", function(event){
 
     console.log(linkOneElementEvent === ulElementEvent)
 })
-
