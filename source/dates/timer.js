@@ -32,3 +32,4 @@ console.log("For")
 // ! setInterval
 
 setInterval((argOne)=> console.log(`${argOne} ${new Date().getSeconds()}`), 1000, 'hello')
+console.log('2'.padStart(3,0))
