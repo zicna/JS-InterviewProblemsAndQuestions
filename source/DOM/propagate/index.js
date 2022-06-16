@@ -60,3 +60,13 @@ navElement.addEventListener("click", function(event){
 
     console.log(linkOneElementEvent === ulElementEvent)
 })
+
+console.log(document.querySelector(".show"))
+
+window.addEventListener("beforeunload", function(event){
+    // event.preventDefault();
+    console.log(event)
+    event.returnValue = null;
+
+    
+})
