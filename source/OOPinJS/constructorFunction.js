@@ -1,5 +1,5 @@
 // ! this mechanism is how inheritance in constructor function and ES clases works 
-// ! that is way we say ES clases are just syntactic sugar 
+// ! that is way we say ES clases are just syntactic sugar (layer of abstruction over constructor function) 
 
 // * STEP ONE - person constructor function; parent 
 const Person = function(firstName, lastName, birthYear){
@@ -14,9 +14,9 @@ Person.prototype.calcAge = function(){
 
 // * STEP THREE - person constructor function; child
 const Student = function(firstName, lastName, birthYear, course){
-    // this.firstName = firstName // duplication
-    // this.lastName =  lastName // duplication
-    // this.birthYear = birthYear  // duplication
+    // this.firstName = firstName //! duplication
+    // this.lastName =  lastName //! duplication
+    // this.birthYear = birthYear  //! duplication
 
     // * STEP FOR - calling Person as regular function so we nned to set manually this keyword
     Person.call(this, firstName, lastName, birthYear)
