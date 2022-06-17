@@ -1,5 +1,4 @@
 const Person = function(firstName, lastName, birthYear){
-    // console.log(this)
     this.firstName = firstName;
     this.lastName = lastName
     this.birthYear = birthYear
