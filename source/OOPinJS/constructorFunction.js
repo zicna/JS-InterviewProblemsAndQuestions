@@ -7,7 +7,7 @@ const Person = function(firstName, lastName, birthYear){
     this.lastName =  lastName
     this.birthYear = birthYear 
 }
-// * STEP TWO - adding calcAge on  constructor function prototype property
+// * STEP TWO - adding method on constructor function prototype property
 Person.prototype.calcAge = function(){
     return new Date().getFullYear() - this.birthYear;
 }
@@ -23,7 +23,8 @@ const Student = function(firstName, lastName, birthYear, course){
     this.course = course
 }
 
-//* STEP FIVE -  Student.prtotype should be an object that inherits from Person.prototype
+//* STEP FIVE -  Student.prototype should be an object that inherits from Person.prototype
+// * Student.prototype
 Student.prototype = Object.create(Person.prototype)
 
 // * STEP SIX - adding methods specific for Student.prototype 
