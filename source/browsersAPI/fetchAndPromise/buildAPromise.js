@@ -12,8 +12,8 @@
 //* Promisifying setTimeout function
 
 const wait = function (seconds) {
-  return new Promise(function (resolve){
-    setTimeout(() => resolve("hello"), seconds * 1000)
+  return new Promise(function (resolve) {
+    setTimeout(() => resolve('hello'), seconds * 1000)
   })
 }
 
@@ -24,3 +24,24 @@ wait(2)
     return wait(1)
   })
   .then(() => console.log('I waited for 1 seconds'))
+
+//* Promisifying geolocation function
+
+//* regular usage of Geolocation
+const successCallback = (position) => console.log(position)
+const errorCallback = (error) => console.log(error)
+
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback)
+
+const gettingLocation = function () {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => resolve(position),
+      (error) => reject(error)
+      // navigator.geolocation.getCurrentPosition(resolve, reject)
+    )
+  })
+}
+console.log(gettingLocation())
+
+gettingLocation().then(resolve => console.log(resolve))
