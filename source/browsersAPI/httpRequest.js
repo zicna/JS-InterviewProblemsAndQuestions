@@ -33,6 +33,4 @@ function ajaxCall(country) {
   })
 }
 
-// * both will fire AJAX call and wich ever one is resolved first will 
-ajaxCall("serbia")
-ajaxCall("portugal")
+
