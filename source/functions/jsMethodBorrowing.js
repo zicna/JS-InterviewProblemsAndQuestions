@@ -17,7 +17,7 @@ const matilda ={
   year: 1999
 } 
 
-// method borrowing
+//* method borrowing
 
 matilda.calcAge = jonas.calcAge;
 
